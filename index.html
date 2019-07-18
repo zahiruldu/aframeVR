@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+      <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+
+    <a-scene gltf-model="dracoDecoderPath: libs/draco/;">
+      <a-assets>
+        <a-asset-item id="sofa" src="gltf/sofa/burtonjames_536sofa/burtonjames_536sofa.gltf"></a-asset-item>
+        <a-asset-item id="bottom" src="gltf/sofa/burtonjames_536sofa_bottom/burtonjames_536sofa_bottom.gltf"></a-asset-item>
+        <a-asset-item id="cushion" src="gltf/sofa/burtonjames_536sofa_cushion/burtonjames_536sofa_cushion.gltf"></a-asset-item>
+        <a-asset-item id="cushionback" src="gltf/sofa/burtonjames_536sofa_cushionback/burtonjames_536sofa_cushionback.gltf"></a-asset-item>
+        <a-asset-item id="leg1" src="gltf/sofa/burtonjames_536sofa_leg1/burtonjames_536sofa_leg1.gltf"></a-asset-item>
+        <a-asset-item id="leg2" src="gltf/sofa/burtonjames_536sofa_leg2/burtonjames_536sofa_leg2.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-entity rotation="0 0 0">
+        <a-entity gltf-model="#bottom" position="0 -70 0"></a-entity>
+        <a-entity gltf-model="#cushion" position="0 0 0"></a-entity>
+        <a-entity gltf-model="#cushionback" position="0 0 -380"></a-entity>
+        <a-entity gltf-model="#leg1" position="-1150 0 0"></a-entity>
+        <a-entity gltf-model="#leg2"  position="1150 0 0"></a-entity>
+      </a-entity>
+      <a-entity camera look-controls position="0 1000 2000" near="0.0005" far="1000" fov="80" zoom="100"></a-entity>
+    </a-scene>
+    
+  </body>
+</html>
